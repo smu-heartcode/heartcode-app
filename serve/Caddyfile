@@ -7,8 +7,7 @@ api.heartcode.app {
 }
 
 *.heartcode.app {
-    root * /www/users/{http.request.host.labels.2}
-    file_server {
-        index index.html
-    }
+    root /robots.txt /var/www/robots.txt
+    root * /var/www/{http.request.host.labels.2}
+    file_server
 }
