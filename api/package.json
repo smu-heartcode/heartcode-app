@@ -1,26 +1,24 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "api.heartcode.app",
   "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "tap test/**/*.test.js",
-    "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js"
+    "start": "fastify start --port 4000 -l info app.js",
+    "dev": "fastify start --port 4000 -w -l info -P app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "@smu-heartcode",
   "dependencies": {
     "fastify": "^3.0.0",
+    "fastify-auth": "^1.0.1",
     "fastify-autoload": "^3.0.2",
     "fastify-cli": "^2.2.0",
-    "fastify-plugin": "^2.0.0"
+    "fastify-plugin": "^2.0.0",
+    "fs-extra": "^9.0.1",
+    "jszip": "^3.5.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
     "@types/lodash": "^4.14.160",
     "@types/node": "^14.6.2",
     "@types/pino": "^6.3.0",
