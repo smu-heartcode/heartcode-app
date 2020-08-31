@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  serve:
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/serve:latest
+    build: serve
+    ports:
+      - "80:80"
+    environment:
+      - WEB_URL=http://web:3000
+      - API_URL=http://api:8000
+
+  web:
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/web:latest
+    build: web
+
+  api:
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/api:latest
+    build: api
+
+  postgres:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: heartcode-app
+      POSTGRES_USER: heartcode-app
+      POSTGRES_PASSWORD: eye-gas-ewe-put-something-secure-hear

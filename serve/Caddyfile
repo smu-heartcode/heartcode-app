@@ -1,0 +1,14 @@
+heartcode.app {
+    reverse_proxy {env.WEB_URL}
+}
+
+api.heartcode.app {
+    reverse_proxy {env.API_URL}
+}
+
+*.heartcode.app {
+    root * /www/users/{http.request.host.labels.2}
+    file_server {
+        index index.html
+    }
+}
