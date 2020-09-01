@@ -4,6 +4,7 @@
   "description": "api.heartcode.app",
   "main": "app.js",
   "scripts": {
+    "migrate": "node-pg-migrate",
     "start": "fastify start --port 4000 -l info app.js",
     "dev": "fastify start --port 4000 -w -l info -P app.js"
   },
@@ -14,8 +15,11 @@
     "fastify-autoload": "^3.0.2",
     "fastify-cli": "^2.2.0",
     "fastify-plugin": "^2.0.0",
+    "fastify-postgres": "^3.0.1",
     "fs-extra": "^9.0.1",
-    "jszip": "^3.5.0"
+    "jszip": "^3.5.0",
+    "node-pg-migrate": "^5.6.0",
+    "pg": "^8.3.3"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
