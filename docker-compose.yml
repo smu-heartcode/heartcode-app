@@ -20,15 +20,15 @@ services:
     image: docker.pkg.github.com/smu-heartcode/heartcode.app/api:latest
     build: api
     environment:
-      POSTGRES_DB: heartcode-app
-      POSTGRES_USER: heartcode-app
-      POSTGRES_PASSWORD: eye-gas-ewe-put-something-secure-hear
+      PG_CONNECTION_STRING: postgres://heartcode-app:eye-gas-ewe-put-something-secure-hear@postgres:5432/heartcode-app
       AUTH_TOKEN: eye-gas-ewe-put-something-secure-hear
     volumes:
       - var-www:/var/www
 
   postgres:
     image: postgres:12
+    ports:
+      - "35432:5432"
     environment:
       POSTGRES_DB: heartcode-app
       POSTGRES_USER: heartcode-app
