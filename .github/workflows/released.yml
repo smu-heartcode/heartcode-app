@@ -1,0 +1,26 @@
+name: Docker Release
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build-push:
+    name: Build Push
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        path: [ api, serve, web ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Publish ${{ matrix.path }}
+        uses: docker/build-push-action@v1
+        with:
+          path: ${{ matrix.path }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: smu-heartcode/heartcode-app/${{ matrix.path }}
+          tag_with_ref: true
