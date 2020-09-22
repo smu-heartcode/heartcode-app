@@ -1,12 +1,12 @@
-heartcode.app {
+http://heartcode.app {
     reverse_proxy {env.WEB_URL}
 }
 
-api.heartcode.app {
+http://api.heartcode.app {
     reverse_proxy {env.API_URL}
 }
 
-*.heartcode.app {
+http://*.heartcode.app {
     root /robots.txt /var/www/robots.txt
     root * /var/www/{http.request.host.labels.2}
     file_server

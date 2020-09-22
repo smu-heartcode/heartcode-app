@@ -12,5 +12,6 @@ RUN npm ci
 ENV NODE_ENV production
 
 COPY . /usr/src/app/
+RUN yarn run generate
 
 CMD [ "npm", "run", "start" ]
