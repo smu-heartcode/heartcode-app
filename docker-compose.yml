@@ -2,26 +2,28 @@ version: '3.6'
 
 services:
   serve:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/serve:latest
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/serve:${TAG}
     build: serve
     ports:
       - "80:80"
+      - "443:443"
     environment:
-      WEB_URL: http://web:3000
-      API_URL: http://api:4000
+      WEB_URL: web:3000
+      API_URL: api:4000
     volumes:
       - var-www:/var/www
+      - caddy_data:/data
 
   web:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/web:latest
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/web:${TAG}
     build: web
 
   api:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/api:latest
+    image: docker.pkg.github.com/smu-heartcode/heartcode.app/api:${TAG}
     build: api
     environment:
-      DATABASE_URL: postgres://heartcode-app:eye-gas-ewe-put-something-secure-hear@postgres:5432/heartcode-app
-      AUTH_TOKEN: eye-gas-ewe-put-something-secure-hear
+      DATABASE_URL: ${DATABASE_URL}
+      AUTH_TOKEN: ${AUTH_TOKEN}
     volumes:
       - var-www:/var/www
 
@@ -30,9 +32,10 @@ services:
     ports:
       - "35432:5432"
     environment:
-      POSTGRES_DB: heartcode-app
-      POSTGRES_USER: heartcode-app
-      POSTGRES_PASSWORD: eye-gas-ewe-put-something-secure-hear
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
 volumes:
   var-www:
+  caddy_data:
