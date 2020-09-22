@@ -10,6 +10,7 @@ services:
     environment:
       WEB_URL: web:3000
       API_URL: api:4000
+      CLOUDFLARE_AUTH_TOKEN: ${CLOUDFLARE_AUTH_TOKEN}
     volumes:
       - var-www:/var/www
       - caddy_data:/data
