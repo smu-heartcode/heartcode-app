@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   serve:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/serve:${TAG}
+    image: docker.pkg.github.com/smu-heartcode/heartcode-app/serve:${TAG}
     build: serve
     ports:
       - "80:80"
@@ -16,11 +16,11 @@ services:
       - caddy_data:/data
 
   web:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/web:${TAG}
+    image: docker.pkg.github.com/smu-heartcode/heartcode-app/web:${TAG}
     build: web
 
   api:
-    image: docker.pkg.github.com/smu-heartcode/heartcode.app/api:${TAG}
+    image: docker.pkg.github.com/smu-heartcode/heartcode-app/api:${TAG}
     build: api
     environment:
       DATABASE_URL: ${DATABASE_URL}
