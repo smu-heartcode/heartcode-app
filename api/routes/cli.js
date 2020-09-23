@@ -2,15 +2,20 @@ const fs = require('fs-extra')
 const config = require('../config')
 
 async function write(username, zip) {
+  console.log(zip)
+
   const files = []
   zip.forEach((path, file) => {
     files.push({path, file})
   })
 
   const promises = files.map(({path, file}) => {
+    if (file.dir) {
+      return
+    }
+
     return file.async("nodebuffer").then(async buffer => {
-      await fs.ensureFile(`${config.VAR_WWW}/${username}/${path}`)
-      await fs.writeFile(`${config.VAR_WWW}/${username}/${path}`, buffer)
+      await fs.outputFile(`${config.VAR_WWW}/${username}/${path}`, buffer)
     })
   })
 
