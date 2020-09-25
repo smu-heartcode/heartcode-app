@@ -11,6 +11,7 @@ module.exports = async function (fastify, opts) {
     direction: 'up'
   })
 
+  await fastify.register(require('fastify-cors'))
   await fastify.register(require('fastify-auth'))
   await fastify.register(require('fastify-postgres'), {
     connectionString: config.DATABASE_URL
