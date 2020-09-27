@@ -1,3 +1,97 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@import './highlight-vs2015.css';
+
+/*h1 {*/
+/*  @apply text-3xl;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*h2 {*/
+/*  @apply text-2xl;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*h3 {*/
+/*  @apply text-xl;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*h4 {*/
+/*  @apply text-lg;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*h5 {*/
+/*  @apply text-base;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*h6 {*/
+/*  @apply text-sm;*/
+/*  @apply font-semibold;*/
+/*}*/
+
+/*a {*/
+/*  !*@apply underline;*!*/
+/*}*/
+
+/*ol {*/
+/*  @apply list-decimal;*/
+/*}*/
+
+/*ul {*/
+/*  @apply list-disc;*/
+/*}*/
+
+/*ol, ul {*/
+/*  @apply py-1;*/
+/*  @apply pl-6;*/
+/*}*/
+
+/*ol > li, ul > li {*/
+/*  @apply pl-2;*/
+/*}*/
+
+/*hr {*/
+/*  border: none;*/
+/*  padding: 48px 0;*/
+
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*hr:after {*/
+/*  content: "· · · ·";*/
+/*  line-height: 1;*/
+/*  font-size: 48px;*/
+/*  letter-spacing: 8px;*/
+/*  @apply text-red-600;*/
+/*}*/
+
+/*button {*/
+/*  @apply bg-gray-300;*/
+/*  @apply py-2;*/
+/*  @apply px-3;*/
+/*  @apply border;*/
+/*  @apply rounded;*/
+/*  @apply font-bold;*/
+/*}*/
+
+/*button:hover {*/
+/*  @apply border-gray-400;*/
+/*}*/
+
+/*input, textarea {*/
+/*  @apply bg-gray-200;*/
+/*  @apply py-2;*/
+/*  @apply px-3;*/
+/*  @apply border;*/
+/*  @apply rounded;*/
+/*  @apply text-lg;*/
+/*  @apply border-gray-200;*/
+/*  @apply w-full;*/
+/*}*/
