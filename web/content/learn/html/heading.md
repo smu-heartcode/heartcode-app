@@ -1,4 +1,5 @@
 ---
+order: 1
 title: Headings
 tags: ['<h1>', '<h2>']
 code: "<h1>I am huge</h1>\n<h2>I am large</h2>\n<h3>I am a heading!</h3>" 

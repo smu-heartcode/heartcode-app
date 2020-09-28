@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2 rounded overflow-hidden border border-gray-300">
-    <vuep :template="liveCode" :options="options"/>
+    <vuep ref="vuep" :template="liveCode" @input="onChange" :options="options" :scope="scope"/>
   </div>
 </template>
 
@@ -15,7 +15,15 @@ export default {
     Vuep
   },
   props: {
+    /**
+     * Code body
+     */
     body: {type: String, required: true,},
+
+    /**
+     * Pass scoped component into CodeSplit Preview
+     */
+    scope: {type: Object,},
   },
   data() {
     return {
@@ -25,5 +33,26 @@ export default {
       liveCode: stripIndent(this.body).trim()
     }
   },
+  methods: {
+    onChange() {
+      if (this.$refs.vuep) {
+        this.$emit('component', this.$refs.vuep.preview)
+      }
+    },
+    refresh() {
+      this.$nextTick(() => {
+        this.$refs.vuep.executeCode(this.liveCode)
+      })
+    }
+  },
+  mounted() {
+    this.onChange()
+  }
 }
 </script>
+
+<style>
+.CodeMirror {
+  height: 100%;
+}
+</style>

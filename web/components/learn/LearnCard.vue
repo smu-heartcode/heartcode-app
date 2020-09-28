@@ -24,9 +24,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 pre {
   background: #1E1E1E;
   color: #DCDCDC;
+
+  > * {
+    overflow: hidden;
+  }
 }
 </style>
