@@ -1,5 +1,6 @@
 export default {
-  mode: 'universal',
+  telemetry: false,
+  ssr: false,
   target: 'static',
   head: {
     title: 'Project Heartcode 2020',
@@ -13,6 +14,9 @@ export default {
     ]
   },
   css: [],
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.less',
+  },
   plugins: [
     '@/plugins/vue-highlightjs.js',
   ],
@@ -26,5 +30,9 @@ export default {
     '@nuxt/content',
   ],
   axios: {},
-  build: {}
+  build: {
+    extend(config) {
+      config.resolve.alias['vue$'] = 'vue/dist/vue.common'
+    }
+  }
 }

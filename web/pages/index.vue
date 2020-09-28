@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto px-6 py-6">
-    <div>
+    <div v-if="false">
       <learn-session/>
     </div>
-    <div class="mt-8">
+    <div>
       <project-banner/>
     </div>
   </div>

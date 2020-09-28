@@ -1,13 +1,13 @@
 <!--suppress HtmlUnknownAttribute -->
 
 <template>
-  <div class="bg-gray-200 hover:bg-gray-300 rounded overflow-hidden hover:shadow-xl cursor-pointer">
-    <div class="px-4 py-3">
-      <h4 class="text-lg font-bold">{{ title }}</h4>
-    </div>
+  <div class="bg-gray-200 h-full rounded overflow-hidden hover:bg-gray-300 hover:shadow-xl cursor-pointer">
+    <div class="h-full flex flex-col">
+      <div class="px-4 py-3">
+        <h4 class="text-lg font-bold">{{ title }}</h4>
+      </div>
 
-    <div>
-      <pre class="text-xs px-4 py-3" v-highlightjs><code class="html">{{ code }}</code></pre>
+      <pre class="flex-grow text-xs px-4 py-3" v-highlightjs><code :class="lang">{{ code }}</code></pre>
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
     title: {type: String, required: true},
     tags: {type: Array, required: true},
     code: {type: String, required: true},
+    lang: {type: String, default: 'html'},
   }
 }
 </script>
