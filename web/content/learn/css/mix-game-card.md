@@ -1,6 +1,6 @@
 ---
 order: 100
-title: Game Card
+title: "!Game Card!"
 tags: []
 code: "<h4>Surprised Pikachu</h4>\n<img src=\"/pikachu.jpg\">\n<h6>🃏 HeartCode 2020</h6>"
 lang: html

@@ -27,6 +27,9 @@ export default {
     const navigation = await $content('learn/navigation').sortBy('order').fetch()
     const media = await $content('learn/media').sortBy('order').fetch()
     const css = await $content('learn/css').sortBy('order').fetch()
+    const javascript = await $content('learn/javascript').sortBy('order').fetch()
+    const reactivity = await $content('learn/reactivity').sortBy('order').fetch()
+    const flow = await $content('learn/flow').sortBy('order').fetch()
 
     return {
       list: [
@@ -35,6 +38,9 @@ export default {
         {title: "Navigation", items: navigation,},
         {title: "Media", items: media,},
         {title: "CSS Design", items: css,},
+        {title: "Javascript", items: javascript,},
+        {title: "Reactivity: Input & Button & Conditions", items: reactivity,},
+        {title: "Reactivity: Control Flow", items: flow,},
       ]
     }
   },

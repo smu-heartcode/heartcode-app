@@ -1,9 +1,10 @@
 ---
 order: 1 
 title: 
-tags: ['',]
+tags: [
+]
 code: ""
-lang: css
+lang: vue
 ---
 
 ```vue
