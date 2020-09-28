@@ -22,25 +22,27 @@ import LearnCard from "~/components/learn/LearnCard";
 export default {
   components: {LearnCard},
   async asyncData({$content}) {
-    const setup = await $content('learn/setup').sortBy('order').fetch()
-    const html = await $content('learn/html').sortBy('order').fetch()
-    const navigation = await $content('learn/navigation').sortBy('order').fetch()
-    const media = await $content('learn/media').sortBy('order').fetch()
-    const css = await $content('learn/css').sortBy('order').fetch()
-    const javascript = await $content('learn/javascript').sortBy('order').fetch()
-    const reactivity = await $content('learn/reactivity').sortBy('order').fetch()
-    const flow = await $content('learn/flow').sortBy('order').fetch()
+
+    async function get(title, path) {
+      return {
+        title,
+        items: await $content(path)
+          .only(['path', 'title', 'tags', 'code', 'lang'])
+          .sortBy('order')
+          .fetch()
+      }
+    }
 
     return {
       list: [
-        {title: "Setting up", items: setup,},
-        {title: "HTML Basic", items: html,},
-        {title: "Navigation", items: navigation,},
-        {title: "Media", items: media,},
-        {title: "CSS Design", items: css,},
-        {title: "Javascript", items: javascript,},
-        {title: "Reactivity: Input & Button & Conditions", items: reactivity,},
-        {title: "Reactivity: Control Flow", items: flow,},
+        await get('Setting up', 'learn/setup'),
+        await get('HTML Basic', 'learn/html'),
+        await get('Navigation', 'learn/navigation'),
+        await get('Media', 'learn/media'),
+        await get('CSS Design', 'learn/css'),
+        await get('Javascript', 'learn/javascript'),
+        await get('Reactivity: Input & Conditions', 'learn/reactivity'),
+        await get('Reactivity: Control Flow', 'learn/flow'),
       ]
     }
   },
