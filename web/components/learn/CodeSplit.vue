@@ -34,7 +34,8 @@ export default {
     }
   },
   methods: {
-    onChange() {
+    onChange(liveCode) {
+      this.liveCode = liveCode
       if (this.$refs.vuep) {
         this.$emit('component', this.$refs.vuep.preview)
       }
