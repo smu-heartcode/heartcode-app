@@ -1,6 +1,6 @@
 ---
 order: 100
-title: "!Math Game!"
+title: "★ Math Game"
 tags: [
 "setInterval()",
 "Math.random()",
