@@ -16,9 +16,13 @@ You can use `CMD/CTR + F` on this page to quickly find the questions you have.
 
 ## Setup Issues
 
+- https://github.com/zkat/npx/issues/146#issuecomment-384016791
+- https://stackoverflow.com/questions/59405152/npx-react-native-init-error-does-not-contain-a-package-json-file-in-appdata-fold
 
 `TODO`
 
+
+## Live Share?
 
 ## What are the list of reserved keywords in `js`, `nuxt` and `vue`?
 
