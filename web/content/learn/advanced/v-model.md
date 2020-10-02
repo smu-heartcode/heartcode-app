@@ -2,10 +2,12 @@
 order: 3
 title: Component v-model
 tags: [
-"<child v-model=\"value to pass\">",
+"<child v-model=\"toBind\">",
+"@input",
+"this.$emit('input', this.text)",
 ]
-code: "components/\n├── custom.vue\n<custom></custom>"
-lang: html
+code: "<child v-model=\"data\">\ndata() {\n  return { data: \"Text\"}"
+lang: vue
 directory: "components/\n├── child.vue\n├── parent.vue"
 layered:
     parent: "/components/parent.vue"
