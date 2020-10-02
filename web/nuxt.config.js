@@ -18,7 +18,9 @@ export default {
     cssPath: '~/assets/css/tailwind.less',
   },
   plugins: [
+    '@/plugins/api.js',
     '@/plugins/vue-highlightjs.js',
+    '@/plugins/vuex-persist.js',
   ],
   components: true,
   buildModules: [
@@ -29,7 +31,9 @@ export default {
     '@nuxtjs/pwa',
     '@nuxt/content',
   ],
-  axios: {},
+  env: {
+    apiUrl: process.env.NODE_ENV === "production" ? 'https://api.heartcode.app' : 'http://localhost:4000',
+  },
   build: {
     extend(config) {
       config.resolve.alias['vue$'] = 'vue/dist/vue.common'
