@@ -2,7 +2,7 @@
 order: 1001
 title: "★ Page"
 tags: []
-code: ""
+code: "<h3>Pokemon Instagram</h3>\n<h2>Pikachu Meme</h2>\n<div class=\"tab\">IMAGES</div>"
 lang: html
 ---
 

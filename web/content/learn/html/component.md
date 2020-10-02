@@ -2,19 +2,22 @@
 order: 10
 title: Components
 tags: [
-    "/components/custom.vue",
-    "<custom>",
+    "/components/child.vue",
+    "<child>",
 ]
-code: "components/\n├── custom.vue\n<custom></custom>"
+code: "components/\n├── child.vue\n<child></child>"
 lang: html
-directory: "components/\n├── custom.vue\n\npages/\n├── index.vue"
+directory: "components/\n├── child.vue\n\npages/\n├── index.vue"
+layered:
+    parent: "/pages/index.vue"
+    child: "/components/child.vue"
 ---
 
 ```vue
 <template>
   <div>
-    <h1>Custom Component</h1>
-    <p>Custom Content</p>
+    <h1>Child Component</h1>
+    <p>I am a child component.</p>
 
     <div>
       <slot></slot>
@@ -26,13 +29,13 @@ directory: "components/\n├── custom.vue\n\npages/\n├── index.vue"
 ```vue
 <template>
   <div>
-    <custom></custom>
+    <child></child>
   </div>
 </template>
 
 <script>
 export default {
-  components: {Custom} // Ignore this for now.
+  components: {Child} // Ignore this for now.
 }
 </script>
 ```

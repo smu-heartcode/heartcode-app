@@ -84,6 +84,7 @@ export default {
         await get('Reactivity: Input & Conditions', 'learn/reactivity'),
         await get('Reactivity: Control Flow', 'learn/flow'),
         await get('Reactivity: API', 'learn/api'),
+        await get('Reactivity: Advanced', 'learn/advanced'),
       ]
     }
   },
