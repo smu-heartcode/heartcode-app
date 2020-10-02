@@ -9,7 +9,9 @@ tags: [
 "justify-content: flex-start;",
 "justify-content: center;",
 "justify-content: flex-end;",
+"justify-content: space-between;",
 "flex-grow: 1;",
+"flex-wrap: wrap;",
 ]
 code: ".horizontal {\n  display: flex;\n}"
 lang: css
