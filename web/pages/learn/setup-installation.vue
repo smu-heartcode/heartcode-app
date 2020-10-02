@@ -104,7 +104,7 @@
           <li>Type <span class="code">npm init heartcode-web-dev</span> and click enter.</li>
           <li>The project is now installed in your desktop.</li>
           <li>
-            Open the project with Visual Studio Code.
+            Find and open the project with Visual Studio Code.
             <img src="@/assets/img/learn/setup/vscode-open-mac.png" alt="Open Project Windows" class="w-1/2">
           </li>
         </ol>
@@ -120,7 +120,8 @@
           </li>
           <li>Type <span class="code">npm init heartcode-web-dev</span> and click enter.</li>
           <li>The project is now installed in your desktop.</li>
-          <li>Open the project with Visual Studio Code.
+          <li>
+            Find and open the project with Visual Studio Code.
             <img src="@/assets/img/learn/setup/vscode-open-win.png" alt="Open Project Windows" class="w-1/2">
           </li>
         </ol>
@@ -131,7 +132,7 @@
         You would now have <b>Visual Studio Code</b>, <b>Node.js</b> and the <b>heartcode-web-dev</b> project installed.
       </blockquote>
       <n-link to="/learn">
-        <button>Go back to Learn</button>
+        Go back to /learn
       </n-link>
     </article>
   </div>

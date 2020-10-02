@@ -1,12 +1,12 @@
 <template>
   <div class="flex">
     <a :href="windows" target="_blank" :class="{is: isWindows}">
-      <windows10 class="w-10 h-10"/>
+      <windows10/>
       <span>Download</span>
     </a>
 
     <a :href="mac" target="_blank" :class="{is: isMac}">
-      <apple-logo class="w-10 h-10"/>
+      <apple-logo/>
       <span>Download</span>
     </a>
   </div>
@@ -44,13 +44,9 @@ export default {
 a {
 @apply no-underline;
 @apply flex;
-@apply py-3;
-@apply pl-4;
-@apply pr-6;
 @apply items-center;
 @apply bg-gray-300;
 @apply rounded;
-@apply mr-6;
 @apply cursor-pointer;
 @apply opacity-25;
 
@@ -65,6 +61,30 @@ a {
   span {
   @apply ml-4;
   @apply font-semibold;
+  }
+}
+
+a {
+@apply py-2;
+@apply pl-2;
+@apply pr-3;
+@apply mr-4;
+
+  > svg {
+  @apply w-6;
+  @apply h-6;
+  }
+
+  @media (min-width: 640px) {
+  @apply py-3;
+  @apply pl-4;
+  @apply pr-6;
+  @apply mr-6;
+
+    > svg {
+    @apply w-10;
+    @apply h-10;
+    }
   }
 }
 </style>
