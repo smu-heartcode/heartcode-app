@@ -43,6 +43,7 @@ export default {
         await get('Javascript', 'learn/javascript'),
         await get('Reactivity: Input & Conditions', 'learn/reactivity'),
         await get('Reactivity: Control Flow', 'learn/flow'),
+        await get('Reactivity: API', 'learn/api'),
       ]
     }
   },

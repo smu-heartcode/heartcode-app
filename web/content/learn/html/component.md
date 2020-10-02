@@ -7,7 +7,7 @@ tags: [
 ]
 code: "components/\n├── custom.vue\n<custom></custom>"
 lang: html
-directory: "components/\n├── custom.vue             <-- <custom></custom>\n├── heartcode-header.vue   <-- <heartcode-header></heartcode-header>"
+directory: "components/\n├── custom.vue\n\npages/\n├── index.vue"
 ---
 
 ```vue
