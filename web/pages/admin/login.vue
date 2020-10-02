@@ -27,8 +27,6 @@
 </template>
 
 <script>
-import store from 'store2'
-
 export default {
   data() {
     return {
@@ -37,8 +35,10 @@ export default {
   },
   methods: {
     login() {
-      store.set('api.heartcode.app/Bearer', this.password)
-      this.$router.push({path: '/admin'})
+      this.$store.dispatch('admin/login', {password: this.password})
+        .then(() => {
+          this.$router.push({path: '/'})
+        })
     }
   }
 }
