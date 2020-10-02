@@ -3,7 +3,7 @@ module.exports = async function (fastify, opts) {
   fastify.route({
     method: 'GET',
     config: {},
-    url: '/documents/:id',
+    url: '/control/:id',
     handler: async (req, reply) => {
       const {id} = req.params
       const {rows} = await fastify.pg.query(
@@ -22,7 +22,7 @@ module.exports = async function (fastify, opts) {
   fastify.route({
     method: 'PUT',
     config: {},
-    url: '/documents/:id',
+    url: '/control/:id',
     preHandler: fastify.auth([fastify.adminAuthorization]),
     handler: async (req, reply) => {
       const {id} = req.params
