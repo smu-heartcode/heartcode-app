@@ -1,10 +1,15 @@
 ---
 order: 1
-title: Props
+title: Component Props
 tags: [
 "<child name=\"value to pass\">",
+"String",
+"Array",
+"Boolean",
+"Object",
+"Function",
 ]
-code: "components/\n├── custom.vue\n<custom></custom>"
+code: "<child active\n       name=\"Name to pass\"\n       :list=\"['abc','cde']\"></child>"
 lang: html
 directory: "components/\n├── child.vue\n├── parent.vue"
 layered:
@@ -15,26 +20,45 @@ layered:
 ```vue
 <template>
   <div>
-    <h1>Custom Component</h1>
-    <p>Custom Content</p>
+    <h1>{{ header }}</h1>
+    <p v-for="item in content">{{ item }}</p>
 
-    <div>
-      <slot></slot>
-    </div>
-  </div>
-</template>
-```
----
-```vue
-<template>
-  <div>
-    <child></child>
+    <br>
+    <h3 v-if="footer">Footer</h3>
   </div>
 </template>
 
 <script>
 export default {
-  components: {Child}
+  props: {
+    header: {
+      type: String, default: "Default Header!"
+    },
+    content: Array,
+    footer: Boolean,
+  }
+}
+</script>
+```
+---
+```vue
+<template>
+  <div>
+    <child header="Content List" 
+           footer 
+           :content="content">
+    </child>
+  </div>
+</template>
+
+<script>
+export default {
+  components: {Child},
+  data() {
+    return {
+      content: ["I am", "in", "a", "list", "."]
+    } 
+  }
 }
 </script>
 ```
