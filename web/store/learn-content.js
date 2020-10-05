@@ -38,6 +38,9 @@ export const mutations = {
       state.content.push(id)
     }
   },
+  disableAll(state) {
+    state.content = []
+  }
 }
 
 export const actions = {
@@ -45,7 +48,7 @@ export const actions = {
     if (state.control.active) {
       return this.$api.$put('/control/learn', {
         content: state.content
-      }).then(() => {
+      }).finally(() => {
         return commit('setControlActive', false)
       })
     } else {

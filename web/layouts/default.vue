@@ -8,9 +8,6 @@
   </div>
 </template>
 
-<style>
-
-</style>
 <script>
 import NavHeader from "@/components/NavHeader";
 
