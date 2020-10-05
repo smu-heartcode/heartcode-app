@@ -9,10 +9,8 @@ import LearnPageParentChild from "~/components/learn/LearnPageLayered";
 
 export default {
   components: {LearnPageParentChild, LearnPage},
-  async asyncData({$content, params: {slug}}) {
-    const path = slug.replace(/-/, '/')
-    const page = await $content(`learn/${path}`, {text: true}).fetch()
-
+  async asyncData({$content, route: {path}}) {
+    const page = await $content(path, {text: true}).fetch()
     return {page}
   }
 }

@@ -3,6 +3,13 @@
     <div v-if="isLoggedIn" class="mb-6 flex justify-end">
       <div class="flex items-center">
         <h4 class="font-bold mr-6">Admin Control</h4>
+
+        <button v-if="isControlActive"
+                @click="disableAll"
+                class="font-bold py-2 px-5 rounded bg-gray-200 focus:outline-none hover:shadow mr-6">
+          Disable All
+        </button>
+
         <button @click="toggleControl" class="font-bold py-2 px-5 rounded bg-gray-200 focus:outline-none hover:shadow">
           Toggle Content
         </button>
@@ -15,7 +22,7 @@
       <div class="mt-4">
         <div class="flex flex-wrap -m-3">
           <div class="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3" v-for="item in content.items" :key="item.title">
-            <n-link :to="getPath(item)" class="block h-full">
+            <n-link :to="item.path" class="block h-full">
               <learn-card :title="item.title" :tags="item.tags" :code="item.code" :lang="item.lang"/>
             </n-link>
 
@@ -50,12 +57,9 @@ export default {
     ...mapGetters('learn-content', ['isControlActive', 'isContentActive', 'isContentAvailable']),
   },
   methods: {
-    getPath({path}) {
-      const postfix = path.replace('/learn/', '')
-      return `/learn/${postfix.replace(/\//, '-')}`
-    },
     ...mapMutations({
       toggleContent: 'learn-content/toggleContent',
+      disableAll: 'learn-content/disableAll',
     }),
     ...mapActions({
       toggleControl: 'learn-content/toggleControl',
@@ -76,15 +80,18 @@ export default {
     return {
       list: [
         await get('Setting up', 'learn/setup'),
-        await get('HTML Basic', 'learn/html'),
-        await get('Navigation', 'learn/navigation'),
-        await get('Media', 'learn/media'),
-        await get('CSS Design', 'learn/css'),
+        await get('HTML: Basic', 'learn/html-basic'),
+        await get('HTML: Advanced', 'learn/html-advanced'),
+        await get('HTML: Media', 'learn/html-media'),
+        await get('HTML: Navigation', 'learn/html-navigation'),
+        await get('CSS: Design', 'learn/css'),
+        await get('CSS: Effects', 'learn/css-effects'),
+        await get('CSS: Layout', 'learn/css-layout'),
         await get('Javascript', 'learn/javascript'),
-        await get('Reactivity: Input & Conditions', 'learn/reactivity'),
-        await get('Reactivity: Control Flow', 'learn/flow'),
-        await get('Reactivity: API', 'learn/api'),
-        await get('Reactivity: Advanced', 'learn/advanced'),
+        await get('Reactivity: Input & Conditions', 'learn/javascript-reactivity'),
+        await get('Reactivity: Control Flow', 'learn/javascript-control-flow'),
+        await get('Reactivity: API', 'learn/javascript-api'),
+        await get('Reactivity: Advanced', 'learn/javascript-advanced'),
       ]
     }
   },

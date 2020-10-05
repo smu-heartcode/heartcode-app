@@ -13,7 +13,7 @@ You can use `CMD/CTR + F` on this page to quickly find the questions you have.
 You can check out [setup installation](/learn/setup-installation); a detailed write up of 
 the steps required to install VS Code, Node.js and the web dev project is written there.
 
-## $ npm init
+## How do I set up the project?
 ```shell
 npm init heartcode-web-dev
 ```
@@ -22,12 +22,25 @@ If you are using a Windows computer, there might be some issues with the cache i
 name contains a space. You can check out this [Stackoverflow article](https://stackoverflow.com/questions/59405152)
 for more information.
 
+## How do run the project?
+
+> Why is my project not running?
+
+```shell
+# cd heartcode-web-dev
+npm run dev
+```
+
+## How do I deploy?
+```shell
+# cd heartcode-web-dev
+npm run deploy
+```
+
 ## VS Code Live Share
 
 Live Share enables your team to quickly collaborate on the same codebase without the need 
 to synchronize code or to configure the same development tools, settings, or environment.
-
-<!-- ## Deployment issues -->
 
 ## What are the list of reserved keywords in js, nuxt and vue?
 

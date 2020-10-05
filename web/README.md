@@ -1,6 +1,6 @@
-# web
+# Project Heartcode 2020
 
-## Build Setup
+A community service project organised by Singapore Management University, School of Information Systems. Project HeartCode serves to provide less privileged youths the opportunity to explore their interest in IT through solving real world problems with IT innovations.
 
 ```bash
 # install dependencies
