@@ -37,6 +37,10 @@ npm run dev
 npm run deploy
 ```
 
+## How do I install code highlight?
+
+[Vetur Plugin](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+
 ## VS Code Live Share
 
 Live Share enables your team to quickly collaborate on the same codebase without the need 

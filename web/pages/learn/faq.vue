@@ -9,7 +9,7 @@
 <script>
 export default {
   async asyncData({$content}) {
-    const page = await $content('learn-faq').fetch()
+    const page = await $content('learn/faq').fetch()
 
     return {
       page
