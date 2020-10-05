@@ -132,18 +132,18 @@
             <li>Open Visual Studio Code</li>
             <li>
               Click <b>Open...</b> and find `heartcode-web-dev` folder in your Desktop.
-              <img src="assets/img/learn/setup/vscode-open-mac.png" alt="Open Project MacOS" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-open-mac.png" alt="Open Project MacOS" class="w-1/2">
             </li>
 
 
             <li>
               Open terminal in Visual Studio Code.
-              <img src="assets/img/learn/setup/vscode-terminal-mac.png" alt="Open VS Code Terminal MacOS" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-mac.png" alt="Open VS Code Terminal MacOS" class="w-1/2">
             </li>
 
             <li>
               Type <span class="code">npm run dev</span> and click enter to run the project.
-              <img src="assets/img/learn/setup/vscode-terminal-open-mac.png" alt="Npm Run Dev MacOS" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-open-mac.png" alt="Npm Run Dev MacOS" class="w-1/2">
             </li>
             <li>
               The project is setup for development!
@@ -159,17 +159,17 @@
             <li>Open Visual Studio Code</li>
             <li>
               Click <b>Open Folder...</b> and find `heartcode-web-dev` folder in your Desktop.
-              <img src="assets/img/learn/setup/vscode-open-win.png" alt="Open Project Windows" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-open-win.png" alt="Open Project Windows" class="w-1/2">
             </li>
 
             <li>
               Open terminal in Visual Studio Code.
-              <img src="assets/img/learn/setup/vscode-terminal-win.png" alt="Open VS Code Terminal Windows" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-win.png" alt="Open VS Code Terminal Windows" class="w-1/2">
             </li>
 
             <li>
               Type <span class="code">npm run dev</span> and click enter to run the project.
-              <img src="assets/img/learn/setup/vscode-terminal-open-win.png" alt="Npm Run Dev Windows" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-open-win.png" alt="Npm Run Dev Windows" class="w-1/2">
             </li>
             <li>
               The project is setup for development!
