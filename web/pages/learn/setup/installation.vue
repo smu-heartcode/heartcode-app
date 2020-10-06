@@ -35,7 +35,6 @@
             <li>Click <b>finish</b> with Launch Visual Studio Code checked</li>
           </ol>
         </div>
-
       </section>
 
       <h2>Node.js</h2>
@@ -205,11 +204,14 @@ export default {
   },
   computed: {
     isMac() {
-      return navigator.platform.indexOf('Mac') > -1
+      return navigator.platform.indexOf('Mac') > -1 || this.isNeither
     },
     isWindows() {
-      return navigator.platform.indexOf('Win') > -1
-    }
+      return navigator.platform.indexOf('Win') > -1 || this.isNeither
+    },
+    isNeither() {
+      return navigator.platform.indexOf('Mac') <= -1 && navigator.platform.indexOf('Win') <= -1
+    },
   }
 }
 </script>
