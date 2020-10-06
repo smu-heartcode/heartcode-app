@@ -36,6 +36,14 @@ export default {
   env: {
     apiUrl: process.env.NODE_ENV === "production" ? 'https://api.heartcode.app' : 'http://localhost:4000',
   },
+  generate: {
+    async routes() {
+      const {$content} = require('@nuxt/content')
+      const files = await $content({deep: true}).only(['path']).fetch()
+
+      return files.map(file => file.path)
+    }
+  },
   build: {
     extend(config) {
       config.resolve.alias['vue$'] = 'vue/dist/vue.common'
