@@ -13,6 +13,19 @@ You can use `CMD/CTR + F` on this page to quickly find the questions you have.
 You can check out [setup installation](/learn/setup-installation); a detailed write up of 
 the steps required to install VS Code, Node.js and the web dev project is written there.
 
+## Setup Issues: Path already exists
+
+```shell
+$ npm init heartcode-web-dev
+npx: installed 102 in ..
+
+create-heartcode-web-dev v0.4.3  
+Can't create heartcode-web-dev because there's already a non empty directory heartcode-web-dev existing in path.
+```
+
+* You need to delete the directory and re-run `npm init heartcode-web-dev`.
+* You can use `rmdir heartcode-web-dev \s` to delete the directory in Windows.
+
 ## How do I set up the project?
 ```shell
 npm init heartcode-web-dev
