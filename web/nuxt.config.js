@@ -32,6 +32,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@smu-heartcode/smu-heartcode-components',
   ],
   env: {
     apiUrl: process.env.NODE_ENV === "production" ? 'https://api.heartcode.app' : 'http://localhost:4000',

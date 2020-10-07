@@ -92,6 +92,7 @@ export default {
         await get('Reactivity: Control Flow', 'learn/javascript-control-flow'),
         await get('Reactivity: API', 'learn/javascript-api'),
         await get('Reactivity: Advanced', 'learn/javascript-advanced'),
+        await get('Examples', 'learn/example'),
       ]
     }
   },
