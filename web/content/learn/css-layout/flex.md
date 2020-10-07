@@ -1,6 +1,6 @@
 ---
-order: 100
-title: Horizontal (Flex)
+order: 2
+title: Display Flex
 tags: [
 "display: flex;",
 "align-items: flex-start",
