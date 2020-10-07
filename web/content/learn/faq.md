@@ -26,6 +26,15 @@ Can't create heartcode-web-dev because there's already a non empty directory hea
 * You need to delete the directory and re-run `npm init heartcode-web-dev`.
 * You can use `rmdir heartcode-web-dev \s` to delete the directory in Windows.
 
+## Setup Issues: Unexpected end of JSON input while parsing near '...'
+
+* If you faced this error, most likely your cache is corrupted.
+* You can clear your cache by running this command.
+
+```shell
+npm cache clean --force
+```
+
 ## How do I set up the project?
 ```shell
 npm init heartcode-web-dev
