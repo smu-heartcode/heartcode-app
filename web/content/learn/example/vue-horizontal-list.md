@@ -1,7 +1,8 @@
 ---
-order: 4
+order: 14
 title: Vue Horizontal List
 tags: [
+"<vue-horizontal-list>",
 ]
 code: "<vue-horizontal-list :items=\"items\">\n  <template v-slot:default=\"{item}\">\n</vue-horizontal-list>"
 lang: html

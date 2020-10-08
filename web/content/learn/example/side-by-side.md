@@ -1,7 +1,8 @@
 ---
-order: 3
+order: 13
 title: Side by side
 tags: [
+"<heartcode-container>",
 ]
 code: "<div class=\"side-by-side\">\n  <div class=\"left\">...\n  <div class=\"right\">..."
 lang: html
