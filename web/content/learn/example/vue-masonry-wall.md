@@ -1,7 +1,8 @@
 ---
-order: 5
+order: 15
 title: Vue Masonry Wall
 tags: [
+"<vue-masonry-wall>",
 ]
 code: "<vue-masonry-wall :items=\"items\">\n  <template v-slot:default=\"{item}\">\n</vue-masonry-wall>"
 lang: html

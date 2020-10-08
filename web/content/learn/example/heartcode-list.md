@@ -1,7 +1,8 @@
 ---
-order: 2
+order: 12
 title: Heartcode List
 tags: [
+"<heartcode-list>",
 ]
 code: "<heartcode-list class=\"list\">\n  <heartcode-image class=\"card\"/>\n</heartcode-list>"
 lang: html
