@@ -29,21 +29,14 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      isMac: false,
-      isWin: false,
+  computed: {
+    isMac() {
+      return navigator.platform.indexOf('Mac') > -1
+    },
+    isWindows() {
+      return navigator.platform.indexOf('Win') > -1
     }
-  },
-  mounted() {
-    this.isMac = navigator.platform.indexOf('Mac') > -1
-    this.isWin = navigator.platform.indexOf('Win') > -1
-
-    if (!this.isMac && !this.isWin) {
-      this.isMac = true
-      this.isWin = true
-    }
-  },
+  }
 }
 </script>
 

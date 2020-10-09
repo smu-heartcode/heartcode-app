@@ -5,10 +5,15 @@
 </template>
 
 <script>
+import Vuep from '@smu-heartcode/vuep'
+
 import stripIndent from "strip-indent";
 
 export default {
   name: "CodeSplit",
+  components: {
+    Vuep
+  },
   props: {
     /**
      * Code body
