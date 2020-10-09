@@ -1,5 +1,6 @@
 export default {
   telemetry: false,
+  ssr: false,
   target: 'static',
   head: {
     title: 'Project Heartcode 2020',
@@ -19,10 +20,9 @@ export default {
     cssPath: '~/assets/css/tailwind.less',
   },
   plugins: [
-    {src: '@/plugins/api.js'},
-    {src: '@/plugins/vue-highlightjs.js'},
-    {src: '@/plugins/vuep.js', mode: 'client'},
-    {src: '@/plugins/vuex-persist.js', mode: 'client'},
+    '@/plugins/api.js',
+    '@/plugins/vue-highlightjs.js',
+    '@/plugins/vuex-persist.js',
   ],
   components: true,
   buildModules: [
@@ -36,6 +36,14 @@ export default {
   ],
   env: {
     apiUrl: process.env.NODE_ENV === "production" ? 'https://api.heartcode.app' : 'http://localhost:4000',
+  },
+  generate: {
+    async routes() {
+      const {$content} = require('@nuxt/content')
+      const files = await $content({deep: true}).only(['path']).fetch()
+
+      return files.map(file => file.path)
+    }
   },
   build: {
     extend(config) {
