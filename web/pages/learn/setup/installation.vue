@@ -10,22 +10,22 @@
 
       <h2>VS Code</h2>
 
-      <section>
-        <operating-system-options class="mt-4"
-                                  windows="https://aka.ms/win32-user-stable"
-                                  mac="https://go.microsoft.com/fwlink/?LinkID=620882"
-        />
+      <operating-system-options class="mt-4"
+                                windows="https://aka.ms/win32-user-stable"
+                                mac="https://go.microsoft.com/fwlink/?LinkID=620882"
+      />
 
-        <div v-if="isMac">
+      <operating-system-content>
+        <template v-slot:mac>
           <h4>Mac Installation Instructions</h4>
           <ol>
             <li>Open to unzip <b>VSCode-darwin-stable.zip</b></li>
             <li>Move <b>Visual Studio Code</b> into application folder</li>
             <li>Open <b>Visual Studio Code</b></li>
           </ol>
-        </div>
+        </template>
 
-        <div v-if="isWindows">
+        <template v-slot:win>
           <h4>Windows Installation Instructions</h4>
           <ol>
             <li>Double click <b>VSCodeUserSetup-x64-1.49.2.exe</b></li>
@@ -34,35 +34,35 @@
             <li>And finally, click <b>Install</b></li>
             <li>Click <b>finish</b> with Launch Visual Studio Code checked</li>
           </ol>
-        </div>
-      </section>
+        </template>
+      </operating-system-content>
 
       <h2>Node.js</h2>
 
-      <section>
-        <operating-system-options class="mt-4"
-                                  windows="https://nodejs.org/dist/v12.18.4/node-v12.18.4-x86.msi"
-                                  mac="https://nodejs.org/dist/v12.18.4/node-v12.18.4.pkg"
-        />
+      <operating-system-options class="mt-4"
+                                windows="https://nodejs.org/dist/v12.18.4/node-v12.18.4-x86.msi"
+                                mac="https://nodejs.org/dist/v12.18.4/node-v12.18.4.pkg"
+      />
 
-        <div v-if="isMac">
+      <operating-system-content>
+        <template v-slot:mac>
           <h4>Mac Installation Instructions</h4>
           <ol>
             <li>Open to <b>node-v12.18.4.pkg</b></li>
             <li>Click <b>continue</b> and <b>agree</b> to everything</li>
             <li>And finally, click <b>install</b></li>
           </ol>
-        </div>
+        </template>
 
-        <div v-if="isWindows">
+        <template v-slot:win>
           <h4>Windows Installation Instructions</h4>
           <ol>
             <li>Double click <b>node-v12.18.4-x64.msi</b></li>
             <li>Click <b>next</b>, <b>accept</b> and <b>next</b></li>
             <li>And finally, click <b>install</b></li>
           </ol>
-        </div>
-      </section>
+        </template>
+      </operating-system-content>
 
       <blockquote>
         At this stage, you would have 2 application: Visual Studio Code and Node.js Installed.
@@ -70,8 +70,8 @@
 
       <h2>Setting up Heartcode Web Dev Project</h2>
 
-      <section>
-        <div v-if="isMac">
+      <operating-system-content>
+        <template v-slot:mac>
           <h4>Open Terminal (MacOS)</h4>
 
           <ol class="select-none">
@@ -86,9 +86,9 @@
             <li>The installer will prompt for a <b>password</b>, the password will be given to you in class.</li>
             <li>The project is now installed in your desktop.</li>
           </ol>
-        </div>
+        </template>
 
-        <div v-if="isWindows">
+        <template v-slot:win>
           <h4>Open Command Prompt (Windows)</h4>
 
           <ol class="select-none">
@@ -118,13 +118,13 @@
             <li>The installer will prompt for a <b>password</b>, the password will be given to you in class.</li>
             <li>The project is now installed in your current directory.</li>
           </ol>
-        </div>
-      </section>
+        </template>
+      </operating-system-content>
 
       <h2>Setting up for Development</h2>
 
-      <section>
-        <div v-if="isMac">
+      <operating-system-content>
+        <template v-slot:mac>
           <h4>Open Visual Studio Code (MacOS)</h4>
 
           <ol class="select-none">
@@ -137,7 +137,8 @@
 
             <li>
               Open terminal in Visual Studio Code.
-              <img src="@/assets/img/learn/setup/vscode-terminal-mac.png" alt="Open VS Code Terminal MacOS" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-mac.png" alt="Open VS Code Terminal MacOS"
+                   class="w-1/2">
             </li>
 
             <li>
@@ -149,9 +150,9 @@
               You can visit <a target="_blank" href="http://localhost:3000">localhost:3000</a> to try it out yourself.
             </li>
           </ol>
-        </div>
+        </template>
 
-        <div v-if="isWindows">
+        <template v-slot:win>
           <h4>Open Visual Studio Code (Windows)</h4>
 
           <ol class="select-none">
@@ -163,7 +164,8 @@
 
             <li>
               Open terminal in Visual Studio Code.
-              <img src="@/assets/img/learn/setup/vscode-terminal-win.png" alt="Open VS Code Terminal Windows" class="w-1/2">
+              <img src="@/assets/img/learn/setup/vscode-terminal-win.png" alt="Open VS Code Terminal Windows"
+                   class="w-1/2">
             </li>
 
             <li>
@@ -175,9 +177,8 @@
               You can visit <a target="_blank" href="http://localhost:3000">localhost:3000</a> to try it out yourself.
             </li>
           </ol>
-        </div>
-      </section>
-
+        </template>
+      </operating-system-content>
 
       <h2>Success!</h2>
       <blockquote>
@@ -192,9 +193,10 @@
 
 <script>
 import OperatingSystemOptions from "@/components/learn/setup/OperatingSystemOptions";
+import OperatingSystemContent from "@/components/learn/setup/OperatingSystemContent";
 
 export default {
-  components: {OperatingSystemOptions},
+  components: {OperatingSystemContent, OperatingSystemOptions},
   async asyncData({$content}) {
     const page = await $content('learn/setup/installation').fetch()
 
@@ -202,17 +204,6 @@ export default {
       page
     }
   },
-  computed: {
-    isMac() {
-      return navigator.platform.indexOf('Mac') > -1 || this.isNeither
-    },
-    isWindows() {
-      return navigator.platform.indexOf('Win') > -1 || this.isNeither
-    },
-    isNeither() {
-      return navigator.platform.indexOf('Mac') <= -1 && navigator.platform.indexOf('Win') <= -1
-    },
-  }
 }
 </script>
 

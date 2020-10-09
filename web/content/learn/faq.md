@@ -10,7 +10,7 @@ You can use `CMD/CTR + F` on this page to quickly find the questions you have.
 
 ## Setup instructions
 
-You can check out [setup installation](/learn/setup-installation); a detailed write up of 
+You can check out [setup installation](/learn/setup/installation); a detailed write up of 
 the steps required to install VS Code, Node.js and the web dev project is written there.
 
 ## Setup Issues: Path already exists
