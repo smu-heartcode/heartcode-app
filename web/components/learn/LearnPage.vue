@@ -32,17 +32,14 @@
 </template>
 
 <script>
-import CodeSplit from "~/components/learn/CodeSplit";
-
 export default {
-  components: {CodeSplit},
   props: {
     page: Object,
   },
   computed: {
     code() {
       return this.page.text.replace(/```.*/g, '').trim()
-    }
+    },
   },
 }
 </script>

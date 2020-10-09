@@ -14,12 +14,10 @@
 
 <script>
 import LearnPage from "~/components/learn/LearnPage";
-import CodeSplit from "~/components/learn/CodeSplit";
 
 export default {
   name: "LearnPageLayered",
   components: {
-    CodeSplit,
     LearnPage
   },
   props: {

@@ -1,14 +1,14 @@
 <template>
-  <learn-page-parent-child v-if="page.layered" :page="page"/>
+  <learn-page-layered v-if="page.layered" :page="page"/>
   <learn-page v-else :page="page"/>
 </template>
 
 <script>
 import LearnPage from "~/components/learn/LearnPage";
-import LearnPageParentChild from "~/components/learn/LearnPageLayered";
+import LearnPageLayered from "~/components/learn/LearnPageLayered";
 
 export default {
-  components: {LearnPageParentChild, LearnPage},
+  components: {LearnPageLayered, LearnPage},
   async asyncData({$content, params: {pathMatch}}) {
     const page = await $content(`learn/${pathMatch}`, {text: true}).fetch()
     return {page}
