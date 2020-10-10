@@ -10,6 +10,7 @@ COPY package.json package-lock.json /usr/src/app/
 RUN npm ci
 
 ENV NODE_ENV production
+ENV FASTIFY_BODY_LIMIT 104857600
 
 COPY . /usr/src/app/
 
