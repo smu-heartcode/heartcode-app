@@ -26,6 +26,4 @@ module.exports = async function (fastify, opts) {
     dir: path.join(__dirname, 'routes'),
     options: Object.assign({}, opts)
   })
-
-  fastify.bodyLimit = 104857600
 }
