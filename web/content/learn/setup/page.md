@@ -13,6 +13,11 @@ directory: "pages/\n├── index.vue"
 <template>
   <div>
     <h1>Hello World</h1>
+
+
+    <h1>Open
+    
+    Close</h1>
   </div>
 </template>
 ```
