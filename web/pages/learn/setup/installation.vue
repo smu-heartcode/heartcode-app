@@ -41,8 +41,8 @@
 
       <section>
         <operating-system-options class="mt-4"
-                                  windows="https://nodejs.org/dist/v12.18.4/node-v12.18.4-x86.msi"
-                                  mac="https://nodejs.org/dist/v12.18.4/node-v12.18.4.pkg"
+                                  windows="https://nodejs.org/dist/v14.15.1/node-v14.15.1-x86.msi"
+                                  mac="https://nodejs.org/dist/v14.15.1/node-v14.15.1.pkg"
         />
 
         <div v-if="isMac">
