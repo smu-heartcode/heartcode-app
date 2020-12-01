@@ -179,6 +179,20 @@
       </section>
 
 
+      <h2>Installing Vetur Extension</h2>
+
+      <section>
+        <ol>
+          <li>
+            Click
+            <a href="vscode:extension/octref.vetur" class="py-2 px-3 rounded bg-gray-300 font-bold text-lg no-underline">
+              Install Vetur
+            </a>
+          </li>
+        </ol>
+      </section>
+
+
       <h2>Success!</h2>
       <blockquote>
         You would now have <b>Visual Studio Code</b>, <b>Node.js</b> and the <b>heartcode-web-dev</b> project installed.
