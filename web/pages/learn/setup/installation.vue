@@ -41,8 +41,8 @@
 
       <section>
         <operating-system-options class="mt-4"
-                                  windows="https://nodejs.org/dist/v12.18.4/node-v12.18.4-x86.msi"
-                                  mac="https://nodejs.org/dist/v12.18.4/node-v12.18.4.pkg"
+                                  windows="https://nodejs.org/dist/v14.15.1/node-v14.15.1-x86.msi"
+                                  mac="https://nodejs.org/dist/v14.15.1/node-v14.15.1.pkg"
         />
 
         <div v-if="isMac">
@@ -176,6 +176,20 @@
             </li>
           </ol>
         </div>
+      </section>
+
+
+      <h2>Installing Vetur Extension</h2>
+
+      <section>
+        <ol>
+          <li>
+            Click
+            <a href="vscode:extension/octref.vetur" class="py-2 px-3 rounded bg-gray-300 font-bold text-lg no-underline">
+              Install Vetur
+            </a>
+          </li>
+        </ol>
       </section>
 
 
