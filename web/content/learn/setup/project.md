@@ -1,8 +1,8 @@
 ---
-order: 1
-title: Installation
+order: 2
+title: Project
 tags: []
-code: "$ node -v\n$ npm -v\n"
+code: "$ npm init heartcode-web-dev"
 lang: "Shell Session"
 ---
 
