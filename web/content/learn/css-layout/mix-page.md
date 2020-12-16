@@ -93,12 +93,12 @@ lang: html
 .tab {
   padding: 12px;
   font-weight: 600;
-  opacity: 50%;
+  opacity: 0.5;
   cursor: pointer;
 }
 
 .tab:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .images  {

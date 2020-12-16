@@ -58,7 +58,7 @@ lang: css
 }
 
 .background-rainbow {
-  opacity: 70%;
+  opacity: 0.7;
   background-image: linear-gradient(to right, 
     red,
     orange,
