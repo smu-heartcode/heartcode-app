@@ -1,12 +1,12 @@
 ---
 title: FAQ
-description: 'Frequently asked questions, CMD/CTR + F this page to find answer to common problems.'
+description: 'Frequently asked questions, CMD/CTRL + F this page to find answer to common problems.'
 ---
 
 # Frequently Asked Questions
 
 Find commonly asked questions you have about development, deployment and course content.
-You can use `CMD/CTR + F` on this page to quickly find the questions you have. 
+You can use `CMD/CTRL + F` on this page to quickly find the questions you have. 
 
 ## Setup instructions
 
@@ -59,13 +59,22 @@ npm run dev
 npm run deploy
 ```
 
+## Why is my deployed website not updating?
+
+The website might be cached, you should do a hard refresh.
+
+- `CTRL + F5` for Windows users.
+- `CMD + SHIFT + R` for Mac users.
+
+
 ## How do I install code highlight?
 
 [Vetur Plugin](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 ## VS Code Live Share
 
-Live Share enables your team to quickly collaborate on the same codebase without the need 
+[Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+enables your team to quickly collaborate on the same codebase without the need 
 to synchronize code or to configure the same development tools, settings, or environment.
 
 ## What are the list of reserved keywords in js, nuxt and vue?

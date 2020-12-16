@@ -11,7 +11,10 @@ lang: html
 ```vue
 <template>
   <heartcode-list class="list">
-    <heartcode-image class="card" :src="item.image" v-for="item in list">
+    <heartcode-image class="card"
+                     v-for="item in list"
+                     :src="item.image"
+                     :key="item.image">
       <div class="overlay">
         <div class="tag">
           {{ item.tag }}
