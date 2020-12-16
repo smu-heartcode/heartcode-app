@@ -100,7 +100,7 @@ export default {
 }
 
 .overlay:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 </style>
 

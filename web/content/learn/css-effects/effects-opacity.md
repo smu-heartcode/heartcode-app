@@ -2,9 +2,9 @@
 order: 51
 title: Effects Opacity
 tags: [
-"opacity: 50%",
+"opacity: 0.5",
 ]
-code: ".opacity-50 {\n  opacity: 50%;\n}"
+code: ".opacity-50 {\n  opacity: 0.5;\n}"
 lang: css
 ---
 
@@ -49,7 +49,7 @@ lang: css
 }
 
 .opacity {
-  opacity: 75%;
+  opacity: 0.75;
 }
 </style>
 ```
