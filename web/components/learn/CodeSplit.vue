@@ -53,7 +53,9 @@ export default {
 </script>
 
 <style>
-.CodeMirror {
-  height: 100%;
+.CodeMirror-scroll {
+  overflow-x: scroll;
+  padding-bottom: 64px;
+  margin-bottom: -80px;
 }
 </style>

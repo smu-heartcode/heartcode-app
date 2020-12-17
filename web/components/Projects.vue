@@ -5,11 +5,11 @@
            class="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-3">
         <a :href="project.url" target="_blank">
 
-          <div class="bg-gray-300 h-full rounded overflow-hidden hover:bg-gray-400 hover:shadow-xl cursor-pointer">
+          <div class="bg-purple-200 h-full rounded overflow-hidden hover:bg-purple-300 hover:shadow-xl cursor-pointer">
             <div class="h-full flex flex-col">
 
-              <div class="px-4 py-6 bg-gray-800 text-white">
-                <h4 class="text-center text-2xl font-bold">{{ project.name }}</h4>
+              <div class="px-4 py-6 bg-purple-100 text-gray-800">
+                <h4 class="text-center text-2xl font-semibold">{{ project.name }}</h4>
               </div>
 
               <div class="px-4 py-2 flex justify-end items-center">
