@@ -4,7 +4,7 @@
       <learn-session/>
     </div>
 
-    <div class="mt-12 pb-48">
+    <div class="mt-16 pb-48">
       <h1 class="text-3xl font-bold mb-6 text-center">Student Projects</h1>
       <projects/>
     </div>
