@@ -31,16 +31,6 @@ services:
     volumes:
       - var-www:/var/www
 
-  postgres:
-    image: postgres:12
-    restart: unless-stopped
-    ports:
-      - "35432:5432"
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-
 volumes:
   var-www:
   caddy_data:
