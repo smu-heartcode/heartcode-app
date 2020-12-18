@@ -12,11 +12,6 @@
             <li>And type <b>Terminal</b> in the text field and click enter.</li>
             <li>Type <span class="code">cd ~/Desktop</span> in Terminal and click enter.</li>
             <li>Type <span class="code">npm init heartcode-web-dev</span> in Terminal and click enter.</li>
-            <li>The installer will prompt for a <b>username</b>, you can enter your first name in lowercase without
-              space.
-              (e.g. ben)
-            </li>
-            <li>The installer will prompt for a <b>password</b>, the password will be given to you in class.</li>
             <li>The project is now installed in your desktop.</li>
           </ol>
         </div>
@@ -44,11 +39,6 @@
             </li>
 
             <li>Type <span class="code">npm init heartcode-web-dev</span> and click enter.</li>
-            <li>The installer will prompt for a <b>username</b>, you can enter your first name in lowercase without
-              space.
-              (e.g. ben)
-            </li>
-            <li>The installer will prompt for a <b>password</b>, the password will be given to you in class.</li>
             <li>The project is now installed in your current directory.</li>
           </ol>
         </div>
