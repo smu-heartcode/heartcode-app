@@ -26,9 +26,7 @@ services:
     restart: unless-stopped
     build: api
     environment:
-      DATABASE_URL: ${DATABASE_URL}
       AUTH_TOKEN: ${AUTH_TOKEN}
-      ADMIN_TOKEN: ${ADMIN_TOKEN}
       VAR_WWW: /var/www
     volumes:
       - var-www:/var/www
