@@ -20,9 +20,7 @@ export default {
     cssPath: '~/assets/css/tailwind.less',
   },
   plugins: [
-    '@/plugins/api.js',
     '@/plugins/vue-highlightjs.js',
-    '@/plugins/vuex-persist.js',
   ],
   components: true,
   buildModules: [
@@ -31,8 +29,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxt/content',
-    '@smu-heartcode/smu-heartcode-components',
+    '@nuxt/content'
   ],
   env: {
     apiUrl: process.env.NODE_ENV === "production" ? 'https://api.heartcode.app' : 'http://localhost:4000',
